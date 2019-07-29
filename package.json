@@ -1,19 +1,39 @@
 {
   "name": "project-pizza-server",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
+    "dev": "nodemon",
+    "lint": "eslint src",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SherOnDale/project-pizza-server.git"
+    "url": "git+https://github.com//indian-devs/project-pizza-server.git"
   },
-  "author": "Sherin Binu <sherinbinu@hotmail.com> (https://sherondale.me)",
+  "author": "Sherin Binu <sherinbinu@hotmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SherOnDale/project-pizza-server/issues"
+    "url": "https://github.com//indian-devs/project-pizza-server/issues"
   },
-  "homepage": "https://github.com/SherOnDale/project-pizza-server#readme"
+  "homepage": "https://github.com//indian-devs/project-pizza-server#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.0.0",
+    "helmet": "^3.20.0",
+    "hpp": "^0.2.2",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "cucumber": "^5.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.1",
+    "nodemon": "^1.19.1",
+    "superagent": "^5.1.0"
+  }
 }
