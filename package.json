@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
+    "ci": "start-test 5000",
     "dev": "nodemon",
     "lint": "eslint src",
     "start": "node .",
@@ -35,6 +36,7 @@
     "eslint-plugin-import": "^2.18.2",
     "husky": "^3.0.1",
     "nodemon": "^1.19.1",
+    "start-server-and-test": "^1.9.1",
     "superagent": "^5.1.0"
   }
 }
