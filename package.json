@@ -7,7 +7,8 @@
     "dev": "nodemon",
     "lint": "eslint src",
     "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:e2e",
+    "test:e2e": "cucumber-js spec/cucumber/features --require spec/cucumber/steps --tags \"not @todo\""
   },
   "repository": {
     "type": "git",
