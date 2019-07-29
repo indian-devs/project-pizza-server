@@ -48,7 +48,7 @@ Make the necessary changes.
 
 ### 3. Commit and Open PR
 
-Once you are done with the chnages, save everything. It's time to push it back to the forked repository and making a Pull Request.
+Once you are done with the changes, save everything. It's time to push it back to the forked repository and making a Pull Request.
 
 Follow these commands to push changes to forked repository.
 
@@ -60,4 +60,4 @@ git commit -m 'A nice commit message here'
 git push origin master
 ```
 
-The chnages should be live in forked repository. Go to github and make a Pull Request to `dev` branch.
+The changes should be live in forked repository. Go to github and make a Pull Request to `dev` branch.
