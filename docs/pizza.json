@@ -1,0 +1,128 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Project Pizza",
+    "version": "1.0.0",
+    "title": "Project Pizza",
+    "termsOfService": "https://pizza.io/tos",
+    "contact": {
+      "email": "contact@pizza.io"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "api.pizza.io",
+  "tags": [
+    {
+      "name": "pizzeria",
+      "description": "Operations about pizzeria"
+    },
+    {
+      "name": "pizza",
+      "description": "Operations about pizza"
+    },
+    {
+      "name": "compare",
+      "description": "Compare two pizza"
+    }
+  ],
+  "schemes": ["https", "http"],
+  "paths": {
+    "/pizzeria": {
+      "get": {
+        "tags": ["pizzeria"],
+        "summary": "Get list of all pizzerias",
+        "description": "Get list of all pizzerias based on the provided location",
+        "operationId": "getPizzerias",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "location",
+            "description": "Location of the user",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid Location"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "Operation Successful"
+          }
+        }
+      }
+    },
+    "/pizza": {
+      "get": {
+        "tags": ["pizza"],
+        "summary": "Get list of all pizza",
+        "description": "Get list of all pizza based on the selected pizzeria",
+        "operationId": "getPizza",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "pizza",
+            "description": "Slug of the selected pizza",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid Slug"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "Operation Successful"
+          }
+        }
+      }
+    },
+    "/compare": {
+      "get": {
+        "tags": ["compare"],
+        "summary": "Compare two pizzas",
+        "description": "Compare two pizzas",
+        "operationId": "comparePizzas",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Pizza 1 Slug",
+            "description": "Slug of the pizza",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Pizza 2 Slug",
+            "description": "Slug of the pizza",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid Slug"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "Operation Successful"
+          }
+        }
+      }
+    }
+  }
+}
