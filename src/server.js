@@ -5,6 +5,8 @@ const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const config = require('./config');
 
+const setResponseHeaders = require('./middlewares/setResponseHeaders');
+
 const app = express();
 
 const limiter = rateLimit({
@@ -20,6 +22,8 @@ app.use(helmet());
 app.use(xss());
 app.use(hpp());
 app.use(limiter);
+
+app.use(setResponseHeaders);
 
 app.use('/', (req, res) => {
   res.send('Pizza!');
