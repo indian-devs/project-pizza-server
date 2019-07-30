@@ -20,10 +20,6 @@
       "description": "Operations about pizzeria"
     },
     {
-      "name": "pizza",
-      "description": "Operations about pizza"
-    },
-    {
       "name": "compare",
       "description": "Compare two pizza"
     }
@@ -59,18 +55,18 @@
         }
       }
     },
-    "/pizza": {
+    "/pizzeria/{pizzeriaId}": {
       "get": {
-        "tags": ["pizza"],
-        "summary": "Get list of all pizza",
+        "tags": ["pizzeria"],
+        "summary": "Get pizzeria by ID",
         "description": "Get list of all pizza based on the selected pizzeria",
-        "operationId": "getPizza",
+        "operationId": "getPizzeria",
         "produces": ["application/json"],
         "parameters": [
           {
-            "in": "query",
-            "name": "pizza",
-            "description": "Slug of the selected pizza",
+            "in": "path",
+            "name": "pizzeriaId",
+            "description": "ID of the selected pizzeria",
             "required": true,
             "type": "string"
           }

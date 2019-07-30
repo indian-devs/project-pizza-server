@@ -17,7 +17,7 @@ Feature: Compare Pizzas
 
   Scenario: Invalid Pizza
 
-    If the user sends a GET request to /compare with invalid pizza slug, they should receive a response with a 400 status code.
+    If the user sends a GET request to /compare with invalid pizza ID, they should receive a response with a 400 status code.
 
     When the client creates a GET request to /compare from http://locahost:3000 with invalid pizza
     And sends the request
@@ -25,11 +25,11 @@ Feature: Compare Pizzas
     And the content type of the response should be JSON
     And the payload of the response should be a JSON object
     And contains an error property set to true
-    And contains a message property which says "The pizzaSlug must be valid"
+    And contains a message property which says "The pizzaID must be valid"
 
   Scenario: Minimal Valid Request
 
-    If the user sends a GET request to /compare with valid pizzas, they should receive a response with a 200 status code.
+    If the user sends a GET request to /compare with valid pizza IDs, they should receive a response with a 200 status code.
 
     When the client creates a GET request to /compare from http://locahost:3000 with valid pizza
     And sends the request
